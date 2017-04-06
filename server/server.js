@@ -39,7 +39,7 @@
      //console.log('id is ',id)
 
      if(ObjectID.isValid(id)){
-         User.findById(id).then(
+         Todo.findById(id).then(
              (user) => {
                  if(!user) return res.send({err:'user nou found'});
                  res.send({user})
