@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
 
+
 var Todo = mongoose.model('Todo',{
     text:{
         type:String,
@@ -16,6 +17,10 @@ var Todo = mongoose.model('Todo',{
     completedAt:{
         type: Number,
         default:123
+    },
+    owner:{
+        required: true,
+        type: mongoose.Schema.Types.ObjectId
     }
 });
 
